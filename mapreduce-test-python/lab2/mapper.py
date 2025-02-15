@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 import re
 import sys
+import os
 
 pat = re.compile('(?P<ip>\d+\.\d+\.\d+\.\d+).*?\d{4}:(?P<hour>\d{2}):\d{2}.*? ')
 
 # get the range passed by the user
-r = sys.argv[1]
+r = os.getenv("FILTER_WORD", "")
 start, end  = tuple(r.split('-'))
 
 try:
