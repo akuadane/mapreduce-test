@@ -13,11 +13,11 @@ try:
     end = int(end)
 
     for line in sys.stdin:
-    match = pat.search(line)
-    if match:
-        hour = int(match.group('hour'))
-        if start<=hour<=end:
-            print '%s\t%s' % ('[' + match.group('hour') + ':00' + ']' + match.group('ip'), 1)
+        match = pat.search(line)
+        if match:
+            hour = int(match.group('hour'))
+            if start<=hour<=end:
+                print '%s\t%s' % ('[' + match.group('hour') + ':00' + ']' + match.group('ip'), 1)
 
 except:
     pass
