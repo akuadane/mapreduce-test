@@ -7,7 +7,7 @@
 /usr/local/hadoop/bin/hdfs dfs -mkdir -p /lab2/input/
 /usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../../mapreduce-test-data/access.log /lab2/input/
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar \
--file ../../mapreduce-test-python/lab2/mapper.py -mapper "../../mapreduce-test-python/lab2/mapper.py 0-1"\
+-file ../../mapreduce-test-python/lab2/mapper.py -mapper "python ../../mapreduce-test-python/lab2/mapper.py 0-1"\
 -file ../../mapreduce-test-python/lab2/reducer.py -reducer ../../mapreduce-test-python/lab2/reducer.py \
 -input /lab2/input/access.log -output /lab2/output/
 
