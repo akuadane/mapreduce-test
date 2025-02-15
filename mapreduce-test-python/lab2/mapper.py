@@ -17,7 +17,7 @@ try:
         match = pat.search(line)
         if match:
             hour = int(match.group('hour'))
-            if start<=hour<=end:
+            if start<=hour<end:
                 print '%s\t%s' % ('[' + match.group('hour') + ':00' + ']' + match.group('ip'), 1)
 
 except:
