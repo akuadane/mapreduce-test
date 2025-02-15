@@ -7,4 +7,4 @@ for line in sys.stdin:
     hour,ip = tuple(hour_ip.split(']'))
     hour+=']'
 
-    print '%s\t%s'%(hour+"-"+count,ip)
+    print '%s\t%s'%(hour+"-"+"{:05d}".format(count),ip)
