@@ -17,7 +17,7 @@ for line in sys.stdin:
         if prev_key!=None:
             print '%d' % (made/total)
             hit_score = str(made/total)
-            print "%s\t%s"%(prev_key,hit_score)
+            print "%s\t%s"%(prev_key,total)
         
         prev_key = key
         made  = value
