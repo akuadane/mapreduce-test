@@ -16,7 +16,7 @@ for line in sys.stdin:
     else:
         if prev_key!=None:
             print '%s, %s' % (str(made), str(total))
-            hit_score = str(round(made/total,2))
+            hit_score = str(made/total,2)
             print "%s\t%s"%(prev_key,hit_score)
         
         prev_key = key
