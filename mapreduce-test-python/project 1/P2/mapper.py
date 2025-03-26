@@ -3,7 +3,7 @@ import sys
 for line in sys.stdin:
     line = line.strip()
     
-    fields = line.split()
+    fields = line.split(",")
     
     # make the player name and defender the key 
     key = "%s-%s" % (fields[19],fields[14])
