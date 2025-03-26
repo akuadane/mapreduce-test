@@ -7,6 +7,6 @@ for line in sys.stdin:
     
     # make the player name and defender the key 
     
-    key = "%s-%s" % (fields[20],fields[15])
+    key = "%s-%s" % (fields[22],fields[17])
     value  = 1 if fields[14]=='made' else 0
     print "%s\t%s" % (key, value)
