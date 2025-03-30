@@ -12,7 +12,7 @@ command = [
     # "-file", centroids_file  # Pass the current centroids file to the mappers
 ]
 
-subprocess.check_call(command, check=True)
+subprocess.check_call(command)
 
 command = [
     "/usr/local/hadoop/bin/hadoop", "jar", "/usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar",
@@ -25,4 +25,4 @@ command = [
     # "-file", centroids_file  # Pass the current centroids file to the mappers
 ]
 
-subprocess.check_call(command, check=True)
+subprocess.check_call(command)
