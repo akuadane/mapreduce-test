@@ -8,11 +8,11 @@ for line in sys.stdin:
     
     key, defender= line.split("\t")
 
-    player,_ = key.split('-')   
+    player,hit_score = key.split('-')   
 
     # print the first occurence of the key
     if prev_player!=player:
         prev_player = player
-        print("%s\t%s"%(player,defender))
+        print("%s\t%s with hit score %s"%(player,defender,hit_score))
     
     
