@@ -8,7 +8,7 @@ for line in sys.stdin:
     
     key, defender= line.split("\t")
 
-    player,hit_score = key.split('-')   
+    player,hit_score = key.split('*')   
 
     # print the first occurence of the key
     if prev_player!=player:

@@ -7,10 +7,10 @@ for line in sys.stdin:
     
     
     key, hit_score= line.split("\t")
-    player, defender = key.split('-')
+    player, defender = key.split('*')
 
     # make the key player - hitscore
-    key = "%s-%s"%(player,hit_score)
+    key = "%s*%s"%(player,hit_score)
 
     # make the value - defender
     print("%s\t%s"%(key,defender))

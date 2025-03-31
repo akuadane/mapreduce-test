@@ -16,13 +16,13 @@ for line in sys.stdin:
     else:
         if prev_key!=None:
             hit_score = round(float(made)/total,2)
-            print "%s\t%s"%(prev_key,hit_score)
+            print("%s\t%s"%(prev_key,hit_score))
         
         prev_key = key
         made  = value
         total = 1
 
 hit_score = round(float(made)/total,2)
-print "%s\t%s"%(prev_key,hit_score)
+print("%s\t%s"%(prev_key,hit_score))
     
     
