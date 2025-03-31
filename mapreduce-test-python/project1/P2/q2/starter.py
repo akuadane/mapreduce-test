@@ -10,7 +10,7 @@ command = [
     "-output", "/P2/output/",
     "-mapper", "./q2/first_mapper.py",
     "-reducer", "./q2/first_reducer.py",
-    "-file", "./q2/first_reducer.py",
+    "-file", "./q2/first_mapper.py",
     "-file", "./q2/first_reducer.py",
     # "-file", centroids_file  # Pass the current centroids file to the mappers
 ]
