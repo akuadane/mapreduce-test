@@ -28,10 +28,10 @@ while epoch<max_epoches:
         "/usr/local/hadoop/bin/hadoop", "jar", "/usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar",
         "-input", "/P2/output/*",
         "-output", "/P2/output/",
-        "-mapper", "./q1/mapper.py",
-        "-reducer", "./q1/reducer.py",
-        "-file", "./q1/mapper.py",
-        "-file", "./q1/reducer.py",
+        "-mapper", "./q2/mapper.py",
+        "-reducer", "./q2/reducer.py",
+        "-file", "./q2/mapper.py",
+        "-file", "./q2/reducer.py",
         # "-file", centroids_file  # Pass the current centroids file to the mappers
     ]
 
@@ -49,9 +49,9 @@ command = [
     "/usr/local/hadoop/bin/hadoop", "jar", "/usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar",
     "-input", "/P2/output/*",
     "-output", "/P2/output2/",
-    "-mapper", "./q1/mapper2.py",
-    "-reducer", "./q1/reducer2.py",
-    "-file", "./q1/mapper2.py",
-    "-file", "./q1/reducer2.py",
+    "-mapper", "./q2/mapper2.py",
+    "-reducer", "./q2/reducer2.py",
+    "-file", "./q2/mapper2.py",
+    "-file", "./q2/reducer2.py",
     # "-file", centroids_file  # Pass the current centroids file to the mappers
 ]
