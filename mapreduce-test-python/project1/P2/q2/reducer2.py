@@ -19,8 +19,8 @@ for line in sys.stdin:
     made= int(made)
     z = int(z)
 
-    if name not in filter_players:
-        continue
+    # if name not in filter_players:
+    #     continue
     if prev_player==None:
         prev_player = name
         zone = z

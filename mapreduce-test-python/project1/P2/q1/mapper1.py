@@ -8,7 +8,7 @@ for line in sys.stdin:
     fields = re.split(r',(?=(?:[^"]*"[^"]*")*[^"]*$)', line)
     
     # make the player name and defender the key 
-    key = "%s-%s" % (fields[20],fields[15])
+    key = "%s-%s" % (fields[19],fields[14])
 
     # For the value, use 1 if the player made the shot, 0 otherwise.
     value  = 1 if fields[13]=='made' else 0
