@@ -33,7 +33,7 @@ for line in sys.stdin:
             total+=1
         else:
             new_shot_clock = round(shot_clock/total,3)
-            new_shot_dist = round(shot_dist/total,2)
+            new_shot_dist = round(shot_dist/total,3)
             new_close_def_dist = round(close_def_dist/total,3)
 
             temp_boundaries[zone] = (new_shot_dist,new_close_def_dist,new_shot_clock)
@@ -49,14 +49,15 @@ for line in sys.stdin:
         shot_dist,close_def_dist,shot_clock = sd,cd,sc
         total = 1
 
-new_shot_clock = round(shot_clock/total,3)
-new_shot_dist = round(shot_dist/total,2)
-new_close_def_dist = round(close_def_dist/total,3)
+if prev_key!=None:
+    new_shot_clock = round(shot_clock/total,3)
+    new_shot_dist = round(shot_dist/total,3)
+    new_close_def_dist = round(close_def_dist/total,3)
 
-temp_boundaries[zone] = (new_shot_dist,new_close_def_dist,new_shot_clock)
-players_boundaries[prev_key] = temp_boundaries
+    temp_boundaries[zone] = (new_shot_dist,new_close_def_dist,new_shot_clock)
+    players_boundaries[prev_key] = temp_boundaries
 
 # Save dictionary to a JSON file
-with open('boundaries.json', 'w') as json_file:
+with open('./q2/boundaries.json', 'w') as json_file:
     json.dump(players_boundaries, json_file, indent=4)
     

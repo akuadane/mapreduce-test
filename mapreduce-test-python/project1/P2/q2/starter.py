@@ -12,7 +12,7 @@ command = [
     "-reducer", "./q2/first_reducer.py",
     "-file", "./q2/first_mapper.py",
     "-file", "./q2/first_reducer.py",
-    # "-file", centroids_file  # Pass the current centroids file to the mappers
+
 ]
 subprocess.check_call(command)
 
@@ -32,7 +32,7 @@ while epoch<max_epoches:
         "-reducer", "./q2/reducer.py",
         "-file", "./q2/mapper.py",
         "-file", "./q2/reducer.py",
-        # "-file", centroids_file  # Pass the current centroids file to the mappers
+
     ]
 
     subprocess.check_call(command)
