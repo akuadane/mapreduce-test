@@ -4,7 +4,7 @@ import json
 import json
 
 # Load JSON file into a dictionary
-with open('boundaries.json', 'r') as json_file:
+with open('./q2/boundaries.json', 'r') as json_file:
     players_boundaries = json.load(json_file)
 
 prev_key = None
@@ -48,7 +48,7 @@ for line in sys.stdin:
         zone = z
         shot_dist,close_def_dist,shot_clock = sd,cd,sc
         total = 1
-        
+
 new_shot_clock = round(shot_clock/total,3)
 new_shot_dist = round(shot_dist/total,2)
 new_close_def_dist = round(close_def_dist/total,3)

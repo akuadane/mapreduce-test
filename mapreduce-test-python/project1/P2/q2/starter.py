@@ -37,7 +37,7 @@ while epoch<max_epoches:
 
     subprocess.check_call(command)
     
-    with open('boundaries.json', 'r') as json_file:
+    with open('./q2/boundaries.json', 'r') as json_file:
         new_players_boundaries = json.load(json_file)
 
     if players_boundaries==new_players_boundaries:

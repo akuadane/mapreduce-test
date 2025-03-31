@@ -3,7 +3,7 @@ import sys
 import json
 
 # Load JSON file into a dictionary
-with open('boundaries.json', 'r') as json_file:
+with open('./q2/boundaries.json', 'r') as json_file:
     players_boundaries = json.load(json_file)
 
 

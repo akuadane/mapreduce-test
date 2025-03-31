@@ -53,6 +53,6 @@ temp_boundaries[zone] = (new_shot_dist,new_close_def_dist,new_shot_clock)
 players_boundaries[prev_key] = temp_boundaries
 
 # Save dictionary to a JSON file
-with open('boundaries.json', 'w') as json_file:
+with open('./q2/boundaries.json', 'w') as json_file:
     json.dump(players_boundaries, json_file, indent=4)
     
